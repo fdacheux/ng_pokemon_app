@@ -1,4 +1,7 @@
 <h1 class="center">Pokemon's list :</h1>
+
+<router-outlet></router-outlet>
+
 <input #input (keyup.enter)="selectPokemon(input.value)" type="number" />
 <p *ngIf="pokemonSelected">You chose : {{ pokemonSelected?.name }}</p>
 <p *ngIf="!pokemonSelected">That pokemon does not exist ... yet</p>
