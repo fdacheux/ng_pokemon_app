@@ -1,1 +1,28 @@
-<p>list-pokemon works!</p>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonList" class="col s6 m4">
+      <div class="card horizontal" pkmnBorderCard>
+        <div class="card-image">
+          <img [src]="pokemon.picture" [alt]="pokemon.name" />
+        </div>
+
+        <div class="card-stacked">
+          <div class="card-content">
+            <p class="card-title">{{ pokemon.name }}</p>
+            <p>
+              <small>{{ pokemon.created | date : "dd/MM/yyyy" }}</small>
+              <!-- Pipes modifications are applied from the left to the right-->
+              <!-- pokemon.created | date | uppercase  : Here we start by formating the date then we turn the month to uppercase-->
+            </p>
+            <span
+              *ngFor="let type of pokemon.types"
+              class="{{ type | pokemonTypeColor }}"
+              >{{ type }}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
