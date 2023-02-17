@@ -1,0 +1,5 @@
+@import "./variables.utils.scss";
+
+@mixin form-validity-border($colour) {
+    border-left: solid $colour $border-width;
+}

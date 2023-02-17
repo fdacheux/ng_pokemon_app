@@ -8,7 +8,7 @@ import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-  imports: [BrowserModule, FormsModule,PokemonModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, PokemonModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
