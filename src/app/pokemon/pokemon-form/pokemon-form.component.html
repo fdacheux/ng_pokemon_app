@@ -14,7 +14,21 @@
     
             <div [hidden]="name.valid || name.pristine"
                   class="card-panel red accent-1">
-                  Le nom du pokémon est requis (1-25).
+                  A pokemon's name is required (1-25).
+            </div>
+          </div>
+
+          <!-- Pokemon picture -->
+          <div *ngIf="isAddForm" class="form-group">
+            <label for="picture">Picture</label>
+            <input type="url" class="form-control" id="picture"
+                    required
+                   [(ngModel)]="pokemon.picture" name="picture" 
+                   #picture="ngModel">
+    
+            <div [hidden]="picture.valid || picture.pristine"
+                  class="card-panel red accent-1">
+                  A pokemon's picture is required.
             </div>
           </div>
     
