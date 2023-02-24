@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss",],
 })
 export class LoginComponent {
-  message: string = "Logged out. (username: pikachu/ password: pikachu)";
+  message: string = "Logged out. (username: pikachu/ password: P!k@chu)";
   name: string = "";
   password: string = "";
   auth: AuthService | undefined;
