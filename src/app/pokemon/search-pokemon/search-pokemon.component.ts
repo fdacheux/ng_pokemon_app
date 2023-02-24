@@ -7,8 +7,7 @@ import { PokemonService } from '../pokemon.service';
 @Component({
   selector: 'app-search-pokemon',
   templateUrl: './search-pokemon.component.html',
-  styles: [
-  ]
+  styleUrls: ['./search-pokemon.component.scss']
 })
 export class SearchPokemonComponent {
  

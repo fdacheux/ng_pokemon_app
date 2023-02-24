@@ -4,7 +4,7 @@
       <div class="card-panel">
         <!-- Pokemon name -->
         <div class="form-group">
-          <label for="name">Nom</label>
+          <label for="name">Name</label>
           <input
             type="text"
             class="form-control"
@@ -47,7 +47,7 @@
 
         <!-- Pokemon hp -->
         <div class="form-group">
-          <label for="hp">Point de vie</label>
+          <label for="hp">Health points</label>
           <input
             type="number"
             class="form-control"
@@ -62,13 +62,13 @@
             [hidden]="hp.valid || hp.pristine"
             class="card-panel red accent-1"
           >
-            Les points de vie du pokémon sont compris entre 0 et 999.
+            Health points must be between 0 and 999.
           </div>
         </div>
 
         <!-- Pokemon cp -->
         <div class="form-group">
-          <label for="cp">Dégâts</label>
+          <label for="cp">Attack</label>
           <input
             type="number"
             class="form-control"
@@ -83,7 +83,7 @@
             [hidden]="cp.valid || cp.pristine"
             class="card-panel red accent-1"
           >
-            Les dégâts du pokémon sont compris entre 0 et 99.
+            Combat Power points must be between 0 and 99.
           </div>
         </div>
 
@@ -118,8 +118,14 @@
             class="waves-effect waves-light btn"
             [disabled]="!pokemonForm.form.valid"
           >
-            Valider
+            Submit
           </button>
+          <button
+          type="submit"
+          class="waves-effect waves-light btn"
+        >
+          Cancel
+        </button>
         </div>
       </div>
     </div>

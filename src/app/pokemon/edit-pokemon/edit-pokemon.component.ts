@@ -6,7 +6,6 @@ import { PokemonService } from "../pokemon.service";
 @Component({
   selector: "app-edit-pokemon",
   templateUrl: "./edit-pokemon.component.html",
-  styles: [],
 })
 export class EditPokemonComponent implements OnInit {
   pokemon: Pokemon | undefined;

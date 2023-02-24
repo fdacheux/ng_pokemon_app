@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styles: [],
+  styleUrls: ["./login.component.scss",],
 })
 export class LoginComponent {
   message: string = "Logged out. (username: pikachu/ password: pikachu)";
@@ -17,6 +17,9 @@ export class LoginComponent {
 
   ngOnInit() {
     this.auth = this.authService;
+    if (this.auth.isLoggedIn) {
+      this.message = "Already logged-in.";
+    }
   }
 
   setMessage() {

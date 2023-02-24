@@ -1,8 +1,14 @@
 <nav>
   <div class="nav-wrapper teal">
-    <a href="#" class="brand-logo center">
-      Pokedex
-    </a>
+    <a (click)="goToHomepage()" class="brand-logo center"> Pokedex </a>
+    <ul class="right" *ngIf="auth && auth.isLoggedIn">
+      <li class="right">
+        <a href="#" class="logout-btn">Logout</a>
+      </li>
+      <li  class="right">
+        <a (click)="goToAuthenticationPage()" class="logout-btn">Authentication page</a>
+      </li>
+    </ul>
   </div>
 </nav>
 

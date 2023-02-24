@@ -1,6 +1,13 @@
 @import "../../style/utils/variables.utils.scss";
 @import "../../style/utils/mixins.utils.scss";
 
+.section{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+}
+
 .ng-valid[required] {
     @include form-validity-border($colour-valid);
 }
