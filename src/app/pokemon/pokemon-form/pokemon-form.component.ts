@@ -50,7 +50,12 @@ export class PokemonFormComponent implements OnInit {
   }
 
   cancelEdition() {
-    this.router.navigate([`/pokemons/${this.pokemon?.id}`])
+    if (this.router.url == "/pokemons/edit") {
+      this.router.navigate([`/pokemons/${this.pokemon?.id}`])
+    }
+    else if (this.router.url == "/pokemons/add") {
+      this.router.navigate(['/pokemons'])
+    }
   }
  
   onSubmit() {

@@ -28,15 +28,19 @@
             required
           />
         </div>
+        <div class="card-action center">
+          <button
+            (click)="login()"
+            type="submit"
+            class="waves-effect waves-light btn"
+            *ngIf="!auth?.isLoggedIn"
+          >
+            Login
+          </button>
+        </div>
       </form>
-      <div class="card-action center">
-        <a
-          (click)="login()"
-          class="waves-effect waves-light btn"
-          *ngIf="!auth?.isLoggedIn"
-          >Login</a
-        >
-        <a (click)="logout()" *ngIf="auth?.isLoggedIn">Logout</a>
+      <div class="card-action center" *ngIf="auth?.isLoggedIn">
+        <a (click)="logout()">Logout</a>
       </div>
     </div>
   </div>
