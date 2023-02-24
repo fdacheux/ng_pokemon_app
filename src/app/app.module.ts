@@ -8,9 +8,10 @@ import { PokemonModule } from "./pokemon/pokemon.module";
 import { FormsModule } from "@angular/forms";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent, PageNotFoundComponent, LoginComponent],
   imports: [
     BrowserModule,
     FormsModule,
