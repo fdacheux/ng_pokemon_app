@@ -34,7 +34,7 @@ export class SearchPokemonComponent {
   }
 
   goToDetail(pokemon: Pokemon) {
-    const link = ['/pokemon', pokemon.id];
+    const link = ['/pokemons', pokemon.id];
     this.router.navigate(link);
   }
 }
